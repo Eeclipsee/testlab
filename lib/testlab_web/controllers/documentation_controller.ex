@@ -4,6 +4,7 @@ defmodule TestlabWeb.DocumentationController do
   def documentation(conn, _params) do
 
     conn
+    |> put_status(201)
     |> json(%{message1: "DOCUMENTAÇÃO TESTE DE APLICAÇÃO",
               message2: "teste",
               message3: "para criação de usuario: /api/user",
