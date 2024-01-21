@@ -7,6 +7,11 @@ defmodule TestlabWeb.Router do
 
   scope "/api", TestlabWeb do
     pipe_through :api
+
+    get "/", WelcomeController, :index
+
+    get "/documentation", DocumentationController, :documentation
+
   end
 
   # Enable LiveDashboard in development
